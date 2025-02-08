@@ -8,17 +8,13 @@ st.set_page_config(page_title="Prediction of Disease Outbreaks",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
-    
+  
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
+diabetes_model = pickle.load(open(f'C:/Users/DELL/OneDrive/Desktop/pradiction/training_models/diabetes_model.sav', 'rb'))
 
+heart_disease_model = pickle.load(open(f'C:/Users/DELL/OneDrive/Desktop/pradiction/training_models/heart_disease_model.sav', 'rb'))
 
-
-diabetes_model = pickle.load(open(os.path.join(f'{working_dir}/saved_models/diabetes_model.sav', 'rb'))
-
-heart_disease_model = pickle.load(open(os.path.join(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
-
-parkinsons_model = pickle.load(open(os.path.join(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
+parkinsons_model = pickle.load(open(f'C:/Users/DELL/OneDrive/Desktop/pradiction/training_models/parkinsons_disease_model.sav', 'rb'))
 
 
 with st.sidebar:
